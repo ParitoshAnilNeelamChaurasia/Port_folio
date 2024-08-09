@@ -27,8 +27,7 @@
             font-family: 'Poppins', sans-serif;
         }
 
-        /* for centering the itenms */
-        /* nav -> refers to space above our content */
+        /* for centering the items */
         nav {
             display: flex;
             justify-content: space-around;
@@ -43,14 +42,11 @@
         }
 
         nav ul li {
-            /* for removing bullets */
             list-style: none;
-
             margin: 0 23px;
         }
 
         nav ul li a {
-
             text-decoration: none;
             color: white;
         }
@@ -67,7 +63,6 @@
             margin: 40px 84px;
         }
 
-
         .left {
             font-size: 1.5rem;
         }
@@ -79,22 +74,17 @@
             margin: 110px 0;
         }
 
-        /* .firstSection > div => now only firstSection will get 30% width */
         .firstSection>div {
             width: 30%;
-            /* for having space b/w leftSection and rightSection*/
-            /* background-color: red; */
         }
 
         .leftSection {
-            /* background-color: red; */
             font-size: 3rem;
             margin: 30px 0;
         }
 
         .rightSection {
             width: 30%;
-            /* background-color: red; */
         }
 
         .rightSection img {
@@ -132,8 +122,6 @@
             height: 93px;
             width: 1px;
             background-color: white;
-
-            /* giving margin from top and bottom = 0 and left and right 100px */
             margin: 0 100px;
         }
 
@@ -151,21 +139,14 @@
 
         .footer {
             display: flex;
-            /* left and right -> 122px
-                top and bottom -> 23px */
             padding: 23px 122px;
-
             justify-content: space-evenly;
-
         }
 
         .footer ul {
             list-style: none;
         }
 
-        /* gave width 123px inside footer  */
-
-        /* done such that all the 4 footer came in center */
         .footer>div {
             width: 223px;
         }
@@ -234,7 +215,6 @@
         }
 
         .contact-inputs:focus {
-            /* going to any box we have an border area */
             border: 2px solid #ff994f;
         }
 
@@ -242,7 +222,6 @@
             color: #a9a9a9;
         }
 
-        /* for button */
         .contact-left button {
             display: flex;
             align-items: center;
@@ -254,13 +233,28 @@
             border-radius: 50px;
             background: linear-gradient(270deg, #ff994f, #fa6d86);
             cursor: pointer;
-
         }
 
         @media(max-width:800px) {
             .contact-inputs {
                 width: 80vw;
             }
+        }
+
+        .download-btn {
+            display: inline-block;
+            padding: 10px 20px;
+            font-size: 16px;
+            color: white;
+            background-color: #ff994f;
+            text-decoration: none;
+            border-radius: 50px;
+            margin-top: 20px;
+            text-align: center;
+        }
+
+        .download-btn:hover {
+            background-color: #fa6d86;
         }
     </style>
 </head>
@@ -272,32 +266,24 @@
             <div class="left">Paritosh Portfolio</div>
             <div class="right">
                 <ul>
-
-                    <!-- <a href = '/'></a>  -> for making a cursor option on our links -->
                     <li><a href='/'>Home</a></li>
                     <li class="dropdown">
                         <a href="#" id="projects-link">Projects</a>
                         <ul class="dropdown-content">
                             <li><a href="https://paritoshanilneelamchaurasia.github.io/calcu_lator/">Calculator</a></li>
-                            <li><a href="https://github.com/ParitoshAnilNeelamChaurasia/number_game">Number game</a></li>
+                            <li><a href="https://github.com/ParitoshAnilNeelamChaurasia/number_game">Number game</a>
+                            </li>
                         </ul>
                     </li>
                     <li><a href="tel:+919045790907">Contact me</a></li>
-
                 </ul>
             </div>
-
         </nav>
     </header>
-
-
-    <!-- main website content starts from here -->
 
     <main>
         <section class="firstSection">
             <div class="leftSection">
-
-                <!-- purple -> utility class -->
                 Hi, I'm <span class="purple">Paritosh Chaurasia</span>
                 <div> I am a Web Developer and competitive programmer</div>
 
@@ -312,7 +298,6 @@
         </section>
 
         <section class="secondsection">
-
             <span class="text-grey">What I have done so far</span>
             <h1>Work Experience</h1>
 
@@ -340,18 +325,17 @@
                             target="https://drive.google.com/file/d/1jdFjrr33wyUvYcY6FtLB-p2GUz1itB7M/view?usp=drive_link">
                             <h1>Resume</h1>
                         </a>
+                        <!-- Download Button -->
+                        <a href="Paritosh Chaurasia.pdf" class="download-btn" download="Paritosh Chaurasia Resume">
+                            Download Resume
+                        </a>
                     </div>
-
                 </div>
             </div>
-
-
         </section>
     </main>
 
-
     <footer>
-
         <div class="contact-container">
             <form action="https://api.web3forms.com/submit" method="POST" class="contact-left">
                 <div class="contact-left-title">
@@ -361,14 +345,12 @@
 
                 <input type="hidden" name="access_key" value="04eab758-84c9-4d26-8c5a-a370a4dbe0c8">
 
-
                 <input type="text" name="name" placeholder="Your Name" class="contact-inputs" required>
                 <input type="email" name="email" placeholder="Your Email" class="contact-inputs" required>
                 <textarea name="" placeholder="Your Message" class="contact-inputs" required></textarea>
                 <button type="submit">Submit</button>
             </form>
             <div class="contact-right">
-
             </div>
         </div>
 
@@ -378,7 +360,6 @@
     </footer>
     <script src="./type.js" type="text/javascript"></script>
 
-    <!-- https://github.com/mattboldt/typed.js/ -->
     <script>
         var typed = new Typed('#element', {
             strings: ['Web developer', 'competitive programmer'],
